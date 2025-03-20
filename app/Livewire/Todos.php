@@ -7,10 +7,20 @@ use Livewire\Component;
 class Todos extends Component
 {
     public string $todo = '';
-    public array $todos = [
-        'Take out trash',
-        'Do dishes',
-    ];
+    public array $todos = [];
+
+    public function mount(): void
+    {
+        $this->todos = [
+            'Take out trash',
+            'Do dishes',
+        ];
+    }
+
+    public function updatedTodo(string $value): void
+    {
+        $this->todo = strtoupper($value);
+    }
 
     public function add(): void
     {
