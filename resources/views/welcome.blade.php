@@ -17,6 +17,6 @@
         @endif
     </head>
     <body class="">
-        <livewire:counter />
+        <livewire:todos />
     </body>
 </html>
