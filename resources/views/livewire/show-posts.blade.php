@@ -15,7 +15,13 @@
                     <td>{{ $post->title }}</td>
                     <td>{{ str($post->content)->words(8) }}</td>
                     <td>
-                        <button type="button" wire:click="delete({{ $post->id }})">Delete</button>
+                        <button
+                            type="button"
+                            wire:click="delete({{ $post->id }})"
+                            wire:confirm="Are you sure to delete this post ?"
+                        >
+                            Delete
+                        </button>
                     </td>
                 </tr>
             @endforeach
