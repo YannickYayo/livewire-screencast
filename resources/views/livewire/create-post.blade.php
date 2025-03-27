@@ -11,6 +11,9 @@
         <label for="">
             <span>Content</span>
             <textarea wire:model="content" name="content" id="content"></textarea>
+            <small>Characters :
+                <span x-text="$wire.content.length"></span>
+            </small>
             @error('content') <em>{{ $message }}</em> @enderror
         </label>
 
