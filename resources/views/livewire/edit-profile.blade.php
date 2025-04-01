@@ -5,7 +5,20 @@
         <div class="flex flex-col gap-2">
             <h3 class="font-medium text-slate-700 text-base">Username</h3>
 
-            <input wire:model="username" class="px-3 py-2 border border-slate-300 rounded-lg" type="text" placeholder="Username">
+            <input
+                wire:model.blur="username"
+                @class([
+                    'px-3 py-2 rounded-lg',
+                    'border border-slate-300' => $errors->missing('username'),
+                    'border-2 border-red-500' => $errors->has('username'),
+                ])
+                type="text"
+                placeholder="Username"
+            >
+
+            @error('username')
+                <p class="text-sm text-red-500">{{ $message }}</p>
+            @enderror
         </div>
 
         <div class="flex flex-col gap-2">
