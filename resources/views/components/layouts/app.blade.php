@@ -9,10 +9,10 @@
     </head>
     <body>
         <nav>
-            <a href="/" @class(['current' => request()->is('/')])>Todos</a>
-            <a href="/counter" @class(['current' => request()->is('counter')])>Counter</a>
-            <a href="/posts" @class(['current' => request()->is('posts')])>Posts</a>
-            <a href="/posts/create" @class(['current' => request()->is('posts/create')])>Create Post</a>
+            <a wire:navigate href="/" @class(['current' => request()->is('/')])>Todos</a>
+            <a wire:navigate href="/counter" @class(['current' => request()->is('counter')])>Counter</a>
+            <a wire:navigate href="/posts" @class(['current' => request()->is('posts')])>Posts</a>
+            <a wire:navigate href="/posts/create" @class(['current' => request()->is('posts/create')])>Create Post</a>
         </nav>
         {{ $slot }}
     </body>

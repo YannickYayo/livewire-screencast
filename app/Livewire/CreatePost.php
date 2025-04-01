@@ -24,7 +24,7 @@ class CreatePost extends Component
             'content' => $this->content,
         ]);
 
-        $this->redirect('/posts');
+        $this->redirect('/posts', navigate: true);
     }
 
     public function render()
