@@ -27,11 +27,26 @@
             @enderror
         </label>
 
-        <div class="flex flex-col gap-2">
+        <label class="flex flex-col gap-2">
             <h3 class="font-medium text-slate-700 text-base">Bio</h3>
 
             <textarea wire:model="form.bio" rows="4" class="px-3 py-2 border border-slate-300 rounded-lg" name="" id=""></textarea>
-        </div>
+        </label>
+
+        <fieldset class="flex flex-col gap-2">
+            <div>
+                <legend class="font-medium text-slate-700 text-base">Receive emails ?</legend>
+            </div>
+
+            <div class="flex gap-6">
+                <label class="flex items-center gap-2">
+                    <input wire:model.boolean="form.receive_emails" type="radio" name="receive_emails" value="1"> Yes
+                </label>
+                <label class="flex items-center gap-2">
+                    <input wire:model.boolean="form.receive_emails" type="radio" name="receive_emails" value="0"> No
+                </label>
+            </div>
+        </fieldset>
 
         <div class="flex">
             <button

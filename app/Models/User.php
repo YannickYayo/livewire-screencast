@@ -43,6 +43,9 @@ class User extends Authenticatable
     protected function casts(): array
     {
         return [
+            'receive_emails' => 'boolean',
+            'receive_updates' => 'boolean',
+            'receive_offers' => 'boolean',
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];

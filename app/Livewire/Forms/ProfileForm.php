@@ -10,9 +10,11 @@ use Livewire\Form;
 class ProfileForm extends Form
 {
     public User $user;
+
     #[Validate]
     public string $username = '';
     public string $bio = '';
+    public bool $receive_emails = false;
 
     public function rules(): array
     {
@@ -27,8 +29,10 @@ class ProfileForm extends Form
     public function setUser(User $user): void
     {
         $this->user = $user;
+
         $this->username = $this->user->username;
         $this->bio = $this->user->bio ?? '';
+        $this->receive_emails = $this->user->receive_emails ?? '';
     }
 
     public function update(): void
@@ -37,6 +41,7 @@ class ProfileForm extends Form
 
         $this->user->name = $this->username;
         $this->user->bio = $this->bio;
+        $this->user->receive_emails = $this->receive_emails;
 
         $this->user->save();
     }
