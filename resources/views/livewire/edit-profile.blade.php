@@ -1,3 +1,5 @@
+@use(App\Enums\Country)
+
 <div>
     <h1 class="mb-4 text-2xl text-slate-700 font-semibold">Update your profile</h1>
 
@@ -51,12 +53,9 @@
                 @enderror
             >
                 <option value="" selected disabled>Choose your country</option>
-                <option value="USA">USA</option>
-                <option value="France">France</option>
-                <option value="Australia">Australia</option>
-                <option value="Mexico">Mexico</option>
-                <option value="Brazil">Brazil</option>
-                <option value="Germany">Germany</option>
+                @foreach (Country::cases() as $country)
+                    <option value="{{ $country->value }}">{{ $country->label() }}</option>
+                @endforeach
             </select>
 
             @error('form.country')

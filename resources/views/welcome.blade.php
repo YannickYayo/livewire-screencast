@@ -17,6 +17,6 @@
         @endif
     </head>
     <body class="">
-        <livewire:todos />
+        <livewire:signup />
     </body>
 </html>

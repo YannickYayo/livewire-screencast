@@ -4,6 +4,7 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 
+use App\Enums\Country;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -46,6 +47,7 @@ class User extends Authenticatable
             'receive_emails' => 'boolean',
             'receive_updates' => 'boolean',
             'receive_offers' => 'boolean',
+            'country' => Country::class,
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];

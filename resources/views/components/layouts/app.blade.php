@@ -18,7 +18,7 @@
         <!--     <a wire:navigate href="/posts/create" @class(['current' => request()->is('posts/create')])>Create Post</a> -->
         <!-- </nav> -->
 
-        <main class="flex justify-center items-start py-16 bg-slate-100 min-h-screen text-slate-800">
+        <main class="flex justify-center items-center bg-slate-200 min-h-screen text-slate-800">
             {{ $slot }}
         </main>
     </body>
