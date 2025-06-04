@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use App\Livewire\Forms\PostForm;
 use Livewire\Component;
 
 class AddPostDialog extends Component

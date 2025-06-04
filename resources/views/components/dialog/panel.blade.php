@@ -1,6 +1,6 @@
 <div
     x-dialog
-    x-model="open"
+    x-model="dialogOpen"
     style="display: none"
     class="fixed inset-0 overflow-y-auto z-10 text-left"
 >
@@ -11,7 +11,7 @@
     <div class="relative min-h-screen flex items-center justify-center p-4">
         <div
             x-dialog:panel
-            x-transition.in x-transition.out.opacity
+            x-transition.in
             class="relative max-w-xl w-full bg-white rounded-xl shadow-lg overflow-y-auto"
         >
             <!-- Close Button -->

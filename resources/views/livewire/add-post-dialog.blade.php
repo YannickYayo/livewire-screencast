@@ -1,8 +1,8 @@
 <div>
     <x-dialog wire:model="show">
-        <x-dialog.button>
+        <x-dialog.open>
             <button type="button" class="text-white bg-blue-500 rounded-xl px-4 py-2 text-sm">New Post</button>
-        </x-dialog.button>
+        </x-dialog.open>
 
         <x-dialog.panel>
             <form wire:submit="add" class="flex flex-col gap-4">
@@ -23,9 +23,9 @@
                 </label>
 
                 <x-dialog.footer>
-                    <x-dialog.close-button>
+                    <x-dialog.close>
                         <button type="button" class="text-center rounded-xl bg-slate-300 text-slate-800 px-6 py-2 font-semibold">Cancel</button>
-                    </x-dialog.close-button>
+                    </x-dialog.close>
 
                     <button type="submit" class="text-center rounded-xl bg-blue-500 text-white px-6 py-2 font-semibold disabled:cursor-not-allowed disabled:opacity-50">Save</button>
                 </x-dialog.footer>
