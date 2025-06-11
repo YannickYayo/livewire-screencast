@@ -9,7 +9,7 @@ enum Status: string
     case Failed = 'failed';
     case Refunded = 'refunded';
 
-    public function label()
+    public function label(): string
     {
         return match ($this) {
             self::Paid => 'Paid',
@@ -19,7 +19,7 @@ enum Status: string
         };
     }
 
-    public function icon()
+    public function icon(): string
     {
         return match ($this) {
             self::Paid => 'icon.check',
@@ -29,7 +29,7 @@ enum Status: string
         };
     }
 
-    public function color()
+    public function color(): string
     {
         return match ($this) {
             self::Paid => 'green',
