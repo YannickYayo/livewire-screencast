@@ -8,18 +8,13 @@
         <script defer src="https://unpkg.com/@alpinejs/ui@3.13.2-beta.0/dist/cdn.min.js"></script>
         <link href="https://unpkg.com/@tailwindcss/forms@0.2.1/dist/forms.min.css" rel="stylesheet">
 
-        <title>{{ $title ?? 'Page Title' }}</title>
+        <title>{{ $title ?? 'Livewire Data Tables' }}</title>
     </head>
     <body>
-        <!-- <nav> -->
-        <!--     <a wire:navigate href="/" @class(['current' => request()->is('/')])>Todos</a> -->
-        <!--     <a wire:navigate href="/counter" @class(['current' => request()->is('counter')])>Counter</a> -->
-        <!--     <a wire:navigate href="/posts" @class(['current' => request()->is('posts')])>Posts</a> -->
-        <!--     <a wire:navigate href="/posts/create" @class(['current' => request()->is('posts/create')])>Create Post</a> -->
-        <!-- </nav> -->
-
-        <main class="flex justify-center items-start pt-24 bg-slate-200 min-h-screen text-slate-800">
-            {{ $slot }}
+        <main class="mx-auto flex justify-center px-8 lg:px-16">
+            <div class="py-12 w-full max-w-[50rem]">
+                {{ $slot }}
+            </div>
         </main>
     </body>
 </html>
